@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+openai
+chromadb
+azure-ai-formrecognizer
+azure-core
+tabulate
