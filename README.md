@@ -1,5 +1,6 @@
 📄 RAG-Based Q&A Agent with Reflection (LangGraph-Style Workflow)
-This project implements a Retrieval-Augmented Generation (RAG) based Q&A Agent with a four-step LangGraph-inspired workflow: Plan → Retrieve → Answer → Reflect.
+This project implements a Retrieval-Augmented Generation (RAG) based Q&A Agent with a four-step LangGraph-inspired workflow:
+Plan → Retrieve → Answer → Reflect.
 The agent can ingest PDF documents, store them in a vector database, retrieve relevant chunks based on a question, generate an answer using an LLM, and evaluate its own output for relevance.
 A Streamlit UI is included for uploading PDFs and chatting with the agent interactively.
 🎯 Objective
@@ -30,8 +31,7 @@ project/
 └── data/                  # Folder to store local PDFs (optional)
 🔧 Setup Instructions
 Clone the repository (if submitted via Git)
-git clone <your_repo_link>
-cd project
+git clone repo
 Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
