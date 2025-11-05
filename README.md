@@ -3,6 +3,7 @@ This project implements a Retrieval-Augmented Generation (RAG) based Q&A Agent w
 Plan → Retrieve → Answer → Reflect.
 The agent can ingest PDF documents, store them in a vector database, retrieve relevant chunks based on a question, generate an answer using an LLM, and evaluate its own output for relevance.
 A Streamlit UI is included for uploading PDFs and chatting with the agent interactively.
+
 🎯 Objective
 To demonstrate understanding of:
 AI agent workflow design
@@ -10,6 +11,8 @@ Retrieval-Augmented Generation (RAG) pipelines
 LangGraph-style execution nodes
 Vector search using ChromaDB
 LLM-based reasoning and self-evaluation
+
+
 🧠 Agent Workflow
 Plan
 The agent interprets the user query and determines that retrieval is needed.
@@ -22,14 +25,18 @@ A secondary self-evaluation step checks whether the generated answer adequately 
 The reflection step returns:
 A rating (1–10)
 A justification sentence
-📂 Project Structure
+
+
+##📂 Project Structure
 project/
 │
 ├── app.py                 # Main Streamlit app with agent pipeline
 ├── .env                   # API keys (not committed to Git)
 ├── requirements.txt       # Python dependencies
 └── data/                  # Folder to store local PDFs (optional)
-🔧 Setup Instructions
+
+
+##🔧 Setup Instructions
 Clone the repository (if submitted via Git)
 git clone repo
 Create and activate a virtual environment
@@ -44,6 +51,7 @@ AZURE_API_KEY=your_key_here
 OPENAI_API_KEY=your_key_here
 Run the Streamlit application
 streamlit run app.py
+
 📌 How to Use
 Upload one or more PDFs from the UI.
 Click Ingest to extract text using Azure Form Recognizer and store embeddings in ChromaDB.
@@ -57,7 +65,9 @@ The answer will appear along with reflection logs in the sidebar.
 🔍 Example Query
 “Explain the role of renewable energy in sustainable development.”
 The system retrieves relevant passages, responds concisely, and provides a self-assessed quality rating.
-✅ Features
+
+
+#3✅ Features
 Fully local vector storage using ChromaDB
 OpenAI embeddings and language generation
 Azure Form Recognizer for PDF extraction (handles scanned PDFs)
