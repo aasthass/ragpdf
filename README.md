@@ -1,15 +1,23 @@
 📄 RAG-Based Q&A Agent with Reflection (LangGraph-Style Workflow)
+
 This project implements a Retrieval-Augmented Generation (RAG) based Q&A Agent with a four-step LangGraph-inspired workflow:
 Plan → Retrieve → Answer → Reflect.
+
 The agent can ingest PDF documents, store them in a vector database, retrieve relevant chunks based on a question, generate an answer using an LLM, and evaluate its own output for relevance.
+
 A Streamlit UI is included for uploading PDFs and chatting with the agent interactively.
 
 🎯 Objective
 To demonstrate understanding of:
+
 AI agent workflow design
+
 Retrieval-Augmented Generation (RAG) pipelines
+
 LangGraph-style execution nodes
+
 Vector search using ChromaDB
+
 LLM-based reasoning and self-evaluation
 
 
@@ -53,16 +61,21 @@ pip install -r requirements.txt
 
 4. Add your API keys in a .env file
 AZURE_COGNITIVE_ENDPOINT=your_endpoint_here
+
 AZURE_API_KEY=your_key_here
+
 OPENAI_API_KEY=your_key_here
 
-5. Run the Streamlit application
+6. Run the Streamlit application
 streamlit run app.py
 
 How to Use
 Upload one or more PDFs from the UI or use the local pdfs.
+
 Click Ingest to extract text using Azure Form Recognizer and store embeddings in ChromaDB.
+
 Ask any question in the chat input field.
+
 The system will:
 -Plan the query
 
@@ -80,8 +93,13 @@ The system retrieves relevant passages, responds concisely, and provides a self-
 
 ##Features
 Fully local vector storage using ChromaDB
+
 OpenAI embeddings and language generation
+
 Azure Form Recognizer for PDF extraction (handles scanned PDFs)
+
 Answer quality scoring using LLM-based reflection
+
 Interactive Streamlit UI
+
 Supports batch PDF ingestion (./data/*.pdf)
