@@ -31,8 +31,11 @@ A justification sentence
 project/
 │
 ├── app.py                 # Main Streamlit app with agent pipeline
+
 ├── .env                   # API keys (not committed to Git)
+
 ├── requirements.txt       # Python dependencies
+
 └── data/                  # Folder to store local PDFs (optional)
 
 
